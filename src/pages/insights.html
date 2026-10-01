@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insights — Frontier prototype</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body>
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <aside class="proposal" aria-label="About this prototype">
+      <div class="container">
+        <p class="proposal-eyebrow">Prototype 2 of 5 · Insights library · ideas 16, 21, 26</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>One library for everything Frontier publishes: articles, news, reports, case studies, consultation responses, Frontier Focus, events and the podcast. Search it by keyword, narrow it by type, sector, expertise and year, and share the result, because the filters live in the address. Counts show how much sits behind each option before you choose it.</p></div>
+          <div><h2>Why</h2><p>Articles alone run to 81 pages at six per page. The filters cover sector and service only, with no keyword, date or type, and their links are "#", so a filtered view can't be bookmarked or sent to a colleague. News, case studies, events and newsletters each live in their own list. The work is there in quantity; finding a particular piece of it relies on remembering roughly when it came out.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="container" id="insights">
+      <div class="page-intro">
+        <ol class="crumbs"><li><a href="#">Home</a></li><li>Insights</li></ol>
+        <h1>Insights</h1>
+        <p class="lead">Analysis, reports, case studies and news from across Frontier.</p>
+        <form class="lib-search" id="lib-search" role="search">
+          <label class="visually-hidden" for="lib-q">Search insights</label>
+          <input type="search" id="lib-q" placeholder="Search by keyword, topic or author">
+          <button type="submit" class="btn">Search</button>
+        </form>
+      </div>
+
+      <div class="library-layout">
+        <!-- Filters (R21) -->
+        <aside class="facets-desktop" aria-label="Filter insights">
+          <div id="facets"></div>
+        </aside>
+
+        <div>
+          <div class="results-bar">
+            <p class="result-count" id="result-count" aria-live="polite" style="margin:0"></p>
+            <div class="btn-row">
+              <button type="button" class="btn btn-secondary btn-sm filter-btn-m" data-drawer-open="filter-drawer">Filters<span id="m-filter-count"></span></button>
+              <div class="field"><label for="sort">Sort</label><select id="sort"><option value="newest">Newest first</option><option value="relevance">Most relevant</option><option value="oldest">Oldest first</option></select></div>
+              <button type="button" class="btn btn-secondary btn-sm" data-copy-link>Copy link to these results</button>
+            </div>
+          </div>
+          <div class="active-filters" id="active-filters"></div>
+          <p class="wf-note" data-note="1"><span class="wf-note-label">Behaviour</span>Every filter updates the address, so "Copy link" (or the browser bar) shares exactly this view. Try <a href="~/pages/insights.html?type=Report&amp;sector=Energy&amp;year=2026">Energy reports from 2026</a>. Options that would return nothing are hidden; counts update as you filter.</p>
+          <div id="results"></div>
+          <p class="load-more"><button type="button" class="btn btn-secondary" id="show-more">Show more</button></p>
+          <p class="wf-note query" data-note="2"><span class="wf-note-label">Question for Frontier</span>Should events and Frontier Focus editions sit in the library, or stay in their own sections and only appear in search? We've included them so one search covers everything.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile filter drawer (R24) -->
+    <div class="drawer" id="filter-drawer" aria-hidden="true">
+      <div class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="fd-h">
+        <div class="drawer-head"><h2 id="fd-h">Filters</h2><button type="button" class="drawer-close" data-drawer-close aria-label="Close filters">×</button></div>
+        <div class="drawer-body" id="facets-m"></div>
+        <div class="drawer-foot"><button type="button" class="btn" id="m-apply">Show results</button></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/wireframe-core.js"></script>
+  <script src="~/js/data.js"></script>
+  <script src="~/js/wireframe.js"></script>
+</body>
+</html>

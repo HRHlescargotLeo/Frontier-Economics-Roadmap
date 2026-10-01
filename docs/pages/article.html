@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Article — Frontier prototype</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/theme.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- Prototype navigator (replaces Frontier's own header, R01) -->
+  <header class="sticky site-header proto-nav">
+    <div class="container proto-nav-row">
+      <a class="proto-home" href="../index.html" aria-label="Frontier Economics prototypes, overview">Frontier <span>prototypes</span></a>
+      <nav aria-label="Prototypes">
+        <ul class="proto-links">
+          <li><a href="../index.html" data-proto="index">Overview</a></li>
+          <li><a href="../pages/contact.html" data-proto="contact expertise"><span class="n">1</span> Talk to us</a></li>
+          <li><a href="../pages/insights.html" data-proto="insights search article"><span class="n">2</span> Insights</a></li>
+          <li><a href="../pages/credentials.html" data-proto="credentials case-study"><span class="n">3</span> Track record</a></li>
+          <li><a href="../pages/topics.html" data-proto="topics topic report model"><span class="n">4</span> Big questions</a></li>
+          <li><a href="../pages/subscribe.html" data-proto="subscribe events"><span class="n">5</span> Stay in touch</a></li>
+        </ul>
+      </nav>
+      <a class="follow-chip" href="../pages/subscribe.html#following" aria-label="Topics you follow"><span>Following</span> <b data-follow-count>0</b></a>
+      <button type="button" class="notes-toggle" role="switch" aria-checked="false" data-notes-toggle>
+        <span class="notes-track" aria-hidden="true"><span class="notes-thumb"></span></span>
+        <span class="notes-label">Notes off</span>
+      </button>
+    </div>
+  </header>
+
+
+  <main id="main" class="flush">
+    <aside class="proposal" aria-label="About this prototype">
+      <div class="container">
+        <p class="proposal-eyebrow">Prototype 2 of 5 · Article page · ideas 18, 19, 20, 22</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>The article page with the basics added: the date, reading time and type under the title, a short key findings box for readers who won't get to the end, proper download buttons for the reports behind the piece, and sharing that starts with LinkedIn and includes Copy link. Article and author details are also described in structured data for search engines and AI tools.</p></div>
+          <div><h2>Why</h2><p>The live North Sea article shows no date anywhere on the page; you only see one on the listing card. For commentary on a fast-moving policy debate that matters, and it matters more for the older pieces search turns up. The two reports behind it are linked inline as PDFs, sharing leads with Facebook, and the page tells search engines it is a "website" rather than an article by Frontier's Chair.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="container" id="article">
+      <div class="page-intro">
+        <ol class="crumbs"><li><a href="#">Home</a></li><li><a href="../pages/insights.html">Insights</a></li><li>Article</li></ol>
+        <h1 id="ar-title">North Sea oil and gas: tough trade-offs facing UK policymakers</h1>
+        <!-- Date, reading time and type (R26) -->
+        <p class="article-meta"><span class="badge" id="ar-type">Article</span> <time id="ar-date" datetime="2026-04-28">28 April 2026</time> <span class="sep">·</span> <span id="ar-mins">5 min read</span></p>
+        <p class="result-tags" id="ar-tags"></p>
+      </div>
+
+      <div class="article-layout">
+        <div class="article-body">
+          <div class="wf-placeholder ratio-16-9">Article image 16:9</div>
+
+          <div data-full-only>
+            <p class="lead" style="margin-top:1.5rem">World events have again shown how Britain's energy system is exposed to international shocks. As we launch two new reports following renewed calls for North Sea production, Frontier Chair Sharon White explains the considerations facing the UK government.</p>
+
+            <!-- Key findings (R26) -->
+            <div class="key-findings">
+              <h2>Key findings</h2>
+              <ul>
+                <li>UK offshore production peaked at around 4.5m barrels of oil equivalent a day in 1999 and was about 1.09m in 2024, still enough to meet almost half of UK oil and gas needs.</li>
+                <li>More production would not materially cut prices, which are set in international markets.</li>
+                <li>Whether emissions fall depends on what UK gas replaces: imported LNG is around three times as emissions-intensive, pipeline gas from Norway much less so.</li>
+                <li>Resilience would improve somewhat for gas, but too slowly to shield the UK from near-term shocks.</li>
+                <li>The serious questions are about growth, jobs, tax revenues, emissions and the pace of the transition.</li>
+              </ul>
+            </div>
+            <p class="wf-note" data-note="1"><span class="wf-note-label">Behaviour</span>Written by the author as part of publishing, three to five points. Optional on short news items, expected on anything over about 800 words.</p>
+
+            <h2>How much North Sea oil and gas is left?</h2>
+            <p>[Article body continues as on the live site. The prototype shows the structure around the text rather than the full article.]</p>
+            <h2>What about the impact on carbon emissions?</h2>
+            <p>[Article body.]</p>
+
+            <h2>Read the reports</h2>
+            <ul class="downloads">
+              <li><a href="../pages/report.html"><span class="file-ico">PDF</span><span><b>Part one: prices and resilience</b><br><span class="small muted">April 2026 · PDF [size]</span></span></a></li>
+              <li><a href="../pages/report.html"><span class="file-ico">PDF</span><span><b>Part two: What are the broader impacts of a more supportive North Sea oil and gas environment?</b><br><span class="small muted">May 2026 [sample date] · PDF [size]</span></span></a></li>
+            </ul>
+          </div>
+
+          <div data-generic-only hidden>
+            <p class="lead" style="margin-top:1.5rem">[Standfirst for this piece.]</p>
+            <div class="key-findings"><h2>Key findings</h2><ul><li>[Finding one]</li><li>[Finding two]</li><li>[Finding three]</li></ul></div>
+            <p>[Article body. Open <a href="../pages/article.html?id=north-sea-article">the North Sea article</a> for a fuller example.]</p>
+          </div>
+
+          <!-- Share (R26) -->
+          <div class="share-row" style="margin:2rem 0">
+            <span class="muted small">Share</span>
+            <a class="btn btn-secondary btn-sm" id="ar-li" href="#" target="_blank" rel="noopener">LinkedIn</a>
+            <button type="button" class="btn btn-secondary btn-sm" data-copy-link>Copy link</button>
+            <a class="btn btn-secondary btn-sm" href="#">Email</a>
+            <a class="btn btn-secondary btn-sm" href="#">X</a>
+          </div>
+          <p class="wf-note" data-note="2"><span class="wf-note-label">Behaviour</span>The page carries Article structured data (headline, author, date published and modified, topic) and og:type "article", so search engines and AI answers attribute it to Sharon White and Frontier with the right date.</p>
+
+          <div data-signup-slot="article"></div>
+        </div>
+
+        <aside class="aside-stack" aria-label="About this article">
+          <section><h2>Written by</h2><ul class="team-grid" id="ar-authors"></ul></section>
+          <section><h2>Follow this topic</h2><div id="ar-follow"></div><p class="small muted" style="margin-top:0.5rem">Get an email when we publish more on this.</p></section>
+          <section data-full-only><h2>Part of</h2><p><a href="../pages/topic.html?id=north-sea">North Sea oil and gas</a><br><span class="small muted">Topic hub · 5 pieces</span></p></section>
+        </aside>
+      </div>
+
+      <section aria-labelledby="rel-h" style="margin-top:2rem">
+        <div class="section-head"><h2 id="rel-h">Related</h2></div>
+        <div id="ar-related"></div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Prototype pager (replaces Frontier's own footer, R01) -->
+  <footer class="proto-footer">
+    <div class="container">
+      <nav class="proto-pager" aria-label="Previous and next prototype" data-proto-pager></nav>
+      <p class="wf-meta">Prepared by ClerksWell · Prototypes for discussion · Titles, people and figures from frontier-economics.com; older dates, credentials, upcoming events and anything in [brackets] are samples</p>
+    </div>
+  </footer>
+
+  <script src="../js/wireframe-core.js"></script>
+  <script src="../js/data.js"></script>
+  <script src="../js/wireframe.js"></script>
+</body>
+</html>

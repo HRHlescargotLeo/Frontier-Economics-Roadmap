@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact us — Frontier prototype</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/theme.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- Prototype navigator (replaces Frontier's own header, R01) -->
+  <header class="sticky site-header proto-nav">
+    <div class="container proto-nav-row">
+      <a class="proto-home" href="../index.html" aria-label="Frontier Economics prototypes, overview">Frontier <span>prototypes</span></a>
+      <nav aria-label="Prototypes">
+        <ul class="proto-links">
+          <li><a href="../index.html" data-proto="index">Overview</a></li>
+          <li><a href="../pages/contact.html" data-proto="contact expertise"><span class="n">1</span> Talk to us</a></li>
+          <li><a href="../pages/insights.html" data-proto="insights search article"><span class="n">2</span> Insights</a></li>
+          <li><a href="../pages/credentials.html" data-proto="credentials case-study"><span class="n">3</span> Track record</a></li>
+          <li><a href="../pages/topics.html" data-proto="topics topic report model"><span class="n">4</span> Big questions</a></li>
+          <li><a href="../pages/subscribe.html" data-proto="subscribe events"><span class="n">5</span> Stay in touch</a></li>
+        </ul>
+      </nav>
+      <a class="follow-chip" href="../pages/subscribe.html#following" aria-label="Topics you follow"><span>Following</span> <b data-follow-count>0</b></a>
+      <button type="button" class="notes-toggle" role="switch" aria-checked="false" data-notes-toggle>
+        <span class="notes-track" aria-hidden="true"><span class="notes-thumb"></span></span>
+        <span class="notes-label">Notes off</span>
+      </button>
+    </div>
+  </header>
+
+
+  <main id="main" class="flush">
+    <aside class="proposal" aria-label="About this prototype">
+      <div class="container">
+        <p class="proposal-eyebrow">Prototype 1 of 5 · Contact us · ideas 1, 2, 5, 6</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>A Contact us page that starts by asking what the visitor needs. New work gets a short enquiry form that goes to the right practice, with the name of the person who will reply. Media, careers and existing clients are pointed straight at the right contact. Every office follows below, with its address, phone and email on the page rather than a click away.</p></div>
+          <div><h2>Why</h2><p>Today the page lists nine offices, each with a paragraph and a "Discover more" link, and nothing else: no form, no email address and no phone number. Someone with a piece of work to discuss has to pick an office and go looking. The switchboard also appears in three different formats across the site, and the London page still says Frontier operates from seven locations. None of this stops a determined client, but it doesn't help a casual one.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="container" id="contact">
+      <div class="page-intro">
+        <ol class="crumbs"><li><a href="#">Home</a></li><li>Contact us</li></ol>
+        <h1>Contact us</h1>
+        <p class="lead">Tell us what you need and we'll put you in touch with the right person.</p>
+      </div>
+
+      <!-- Route chooser (R10) -->
+      <section aria-labelledby="route-h">
+        <h2 class="h-small" id="route-h">What can we help with?</h2>
+        <div class="route-cards" role="radiogroup" aria-labelledby="route-h">
+          <label class="option-card" for="route-new"><input type="radio" name="route" id="route-new" value="new"><strong>New work</strong><span>A project, a question about our services or a tender</span></label>
+          <label class="option-card" for="route-media"><input type="radio" name="route" id="route-media" value="media"><strong>Media</strong><span>Comment, interviews and press releases</span></label>
+          <label class="option-card" for="route-careers"><input type="radio" name="route" id="route-careers" value="careers"><strong>Careers</strong><span>Vacancies, internships and applications</span></label>
+          <label class="option-card" for="route-project"><input type="radio" name="route" id="route-project" value="project"><strong>An existing project</strong><span>You're already working with us</span></label>
+          <label class="option-card" for="route-other"><input type="radio" name="route" id="route-other" value="other"><strong>Something else</strong><span>Suppliers, events, anything else</span></label>
+        </div>
+        <p class="muted" id="route-prompt">Choose an option to see who to contact. Our offices are listed below.</p>
+        <p class="wf-note" data-note="1"><span class="wf-note-label">Behaviour</span>Arriving from a sector page, an expert or a case study opens this page with New work already chosen and the area filled in. Try <a href="../pages/contact.html?route=new&amp;area=Competition&amp;expert=jon-adlard">Contact Jon Adlard</a> or <a href="../pages/contact.html?route=new&amp;area=Competition&amp;case=Clearing%20the%20Vodafone%20%2F%20Three%20UK%20merger">Discuss a similar case</a>.</p>
+      </section>
+
+      <!-- New work: enquiry form (R11, R12, R17) -->
+      <section class="route-panel" data-route-panel="new" hidden aria-labelledby="new-h">
+        <div class="split">
+          <div>
+            <h2 id="new-h">Tell us about your project</h2>
+            <div class="context-box" id="enq-context" hidden><p class="small" id="enq-context-text" style="margin:0"></p></div>
+            <form id="enq-form" novalidate>
+              <div class="error-summary" role="alert" hidden><b>Some details are missing.</b> Check the fields marked below.</div>
+              <div class="form-grid">
+                <div class="field"><label for="enq-name">Full name</label><input type="text" id="enq-name" autocomplete="name" required><p class="field-error" hidden>Enter your name</p></div>
+                <div class="field"><label for="enq-org">Organisation</label><input type="text" id="enq-org" autocomplete="organization" required><p class="field-error" hidden>Enter your organisation</p></div>
+                <div class="field"><label for="enq-email">Work email</label><input type="email" id="enq-email" autocomplete="email" required><p class="field-error" hidden>Enter an email address like name@organisation.com</p></div>
+                <div class="field"><label for="enq-phone">Phone <span class="muted">(optional)</span></label><input type="tel" id="enq-phone" autocomplete="tel"></div>
+                <div class="field"><label for="enq-area">Which area is it about?</label><select id="enq-area" required></select><p class="field-error" hidden>Choose an area, or Not sure</p></div>
+                <div class="field"><label for="enq-country">Where are you based?</label><select id="enq-country" required></select><p class="field-error" hidden>Choose a country or region</p></div>
+                <div class="field full"><label for="enq-msg">What would you like to discuss?</label><textarea id="enq-msg" rows="6" required aria-describedby="enq-msg-hint"></textarea><p class="field-hint" id="enq-msg-hint">A few lines is plenty. Please don't include anything confidential at this stage.</p><p class="field-error" hidden>Tell us briefly what you'd like to discuss</p></div>
+              </div>
+              <label class="check" for="enq-consent"><input type="checkbox" id="enq-consent"> Send me Frontier Focus, our newsletter <span class="muted">(optional)</span></label>
+              <p style="margin-top:1rem"><button type="submit" class="btn">Send enquiry</button></p>
+              <p class="wf-note" data-note="2"><span class="wf-note-label">Behaviour</span>Send with fields empty to see the error summary. Each submission is recorded in analytics with the page it came from and the area chosen, so Frontier can see which pages bring in work.</p>
+              <p class="wf-note query" data-note="3"><span class="wf-note-label">Question for Frontier</span>Who should receive enquiries for each sector and expertise area, and what reply time can we promise? The form assumes one named lead per area, with a shared inbox behind them.</p>
+            </form>
+            <div id="enq-done" class="confirm-box" tabindex="-1" hidden>
+              <div class="tick" aria-hidden="true">✓</div>
+              <h2>Thanks, we've got your enquiry</h2>
+              <p>Reference <b id="enq-ref"></b>. A copy is on its way to <b id="enq-done-email"></b>.</p>
+              <p><span id="enq-done-who"></span> will be in touch within two working days [to confirm].</p>
+            </div>
+          </div>
+          <aside class="side-contact" aria-label="Other ways to reach us">
+            <div class="panel surface">
+              <h3>Who will reply</h3>
+              <p class="small" style="margin:0"><span id="enq-who">the practice lead for your area</span></p>
+            </div>
+            <div class="panel">
+              <h3>Prefer to call or email?</h3>
+              <dl class="kv-stack"><div><dt>Phone</dt><dd>+44 (0)20 7031 7000</dd></div><div><dt>Email</dt><dd>hello@frontier-economics.com</dd></div></dl>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- Other routes (R13) -->
+      <section class="route-panel" data-route-panel="media" hidden aria-labelledby="media-h">
+        <h2 id="media-h">Media enquiries</h2>
+        <div class="grid grid-2">
+          <div class="panel"><h3>Press office</h3><dl class="kv-stack"><div><dt>Email</dt><dd>media@frontier-economics.com</dd></div><div><dt>Phone</dt><dd>+44 (0)20 7031 7000</dd></div></dl><p class="small muted">For comment, interviews and copies of our reports.</p></div>
+          <div class="panel"><h3>Spokespeople by topic</h3><ul class="plain small"><li>Energy and North Sea: Dan Roberts</li><li>Competition litigation: Jon Adlard</li><li>AI regulation, public policy: Sharon White</li><li>[Further topics to confirm]</li></ul></div>
+        </div>
+      </section>
+      <section class="route-panel" data-route-panel="careers" hidden aria-labelledby="careers-h">
+        <h2 id="careers-h">Careers</h2>
+        <div class="panel"><p>Current vacancies, internships and analyst programmes are on our jobs board. For anything else, email recruitment@frontier-economics.com or call +44 (0)20 7031 7000.</p><p style="margin:0"><a class="btn" href="#">See current vacancies</a></p></div>
+      </section>
+      <section class="route-panel" data-route-panel="project" hidden aria-labelledby="project-h">
+        <h2 id="project-h">An existing project</h2>
+        <div class="panel"><p>The quickest route is your project lead. If you don't have their details to hand, call the switchboard on +44 (0)20 7031 7000 and we'll put you through.</p></div>
+      </section>
+      <section class="route-panel" data-route-panel="other" hidden aria-labelledby="other-h">
+        <h2 id="other-h">Something else</h2>
+        <div class="panel"><p>Email hello@frontier-economics.com or call +44 (0)20 7031 7000. [Supplier contact to confirm.]</p></div>
+      </section>
+
+      <!-- Office directory (R14) -->
+      <section aria-labelledby="offices-h" style="margin-top:3rem">
+        <div class="section-head"><h2 id="offices-h">Our offices</h2><span class="muted" id="office-count"></span></div>
+        <div class="office-tools">
+          <div class="field"><label for="office-country">Country</label><select id="office-country"></select></div>
+        </div>
+        <ul class="office-list" id="office-list"></ul>
+        <p class="wf-note" data-note="4"><span class="wf-note-label">Behaviour</span>Each office's details are held once in the CMS and reused on this page, the office's own page and anywhere else they appear, so the phone number has one format everywhere. Only London's details are real here.</p>
+      </section>
+    </div>
+  </main>
+
+  <!-- Prototype pager (replaces Frontier's own footer, R01) -->
+  <footer class="proto-footer">
+    <div class="container">
+      <nav class="proto-pager" aria-label="Previous and next prototype" data-proto-pager></nav>
+      <p class="wf-meta">Prepared by ClerksWell · Prototypes for discussion · Titles, people and figures from frontier-economics.com; older dates, credentials, upcoming events and anything in [brackets] are samples</p>
+    </div>
+  </footer>
+
+  <script src="../js/wireframe-core.js"></script>
+  <script src="../js/data.js"></script>
+  <script src="../js/wireframe.js"></script>
+</body>
+</html>

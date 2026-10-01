@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>North Sea oil and gas — Frontier prototype</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/theme.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- Prototype navigator (replaces Frontier's own header, R01) -->
+  <header class="sticky site-header proto-nav">
+    <div class="container proto-nav-row">
+      <a class="proto-home" href="../index.html" aria-label="Frontier Economics prototypes, overview">Frontier <span>prototypes</span></a>
+      <nav aria-label="Prototypes">
+        <ul class="proto-links">
+          <li><a href="../index.html" data-proto="index">Overview</a></li>
+          <li><a href="../pages/contact.html" data-proto="contact expertise"><span class="n">1</span> Talk to us</a></li>
+          <li><a href="../pages/insights.html" data-proto="insights search article"><span class="n">2</span> Insights</a></li>
+          <li><a href="../pages/credentials.html" data-proto="credentials case-study"><span class="n">3</span> Track record</a></li>
+          <li><a href="../pages/topics.html" data-proto="topics topic report model"><span class="n">4</span> Big questions</a></li>
+          <li><a href="../pages/subscribe.html" data-proto="subscribe events"><span class="n">5</span> Stay in touch</a></li>
+        </ul>
+      </nav>
+      <a class="follow-chip" href="../pages/subscribe.html#following" aria-label="Topics you follow"><span>Following</span> <b data-follow-count>0</b></a>
+      <button type="button" class="notes-toggle" role="switch" aria-checked="false" data-notes-toggle>
+        <span class="notes-track" aria-hidden="true"><span class="notes-thumb"></span></span>
+        <span class="notes-label">Notes off</span>
+      </button>
+    </div>
+  </header>
+
+
+  <main id="main" class="flush">
+    <aside class="proposal" aria-label="About this prototype">
+      <div class="container">
+        <p class="proposal-eyebrow">Prototype 4 of 5 · Topic hub · ideas 23, 54</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>A hub for one live question. It opens with Frontier's view in a few lines and the numbers that frame the debate, then lists everything Frontier has published on it in date order (reports, articles, news, events), filterable by type. The people behind the work sit alongside, with a Follow button so readers hear about the next piece.</p></div>
+          <div><h2>Why</h2><p>The North Sea work is some of Frontier's most visible this year: two independent reports, an article by the Chair and a news release. On the live site they are four separate pages in three different lists, and nothing joins them up. Someone arriving from a newspaper link to one of them has no obvious way to find the other three.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="container" id="topic">
+      <div class="context-box" id="tp-other" hidden><p class="small" style="margin:0">You chose <b id="tp-other-name"></b>. This prototype builds out the North Sea hub only; every hub would use the same template.</p></div>
+      <div class="page-intro">
+        <ol class="crumbs"><li><a href="#">Home</a></li><li><a href="../pages/topics.html">Hot topics</a></li><li>North Sea oil and gas</li></ol>
+      </div>
+
+      <div class="hub-head">
+        <div>
+          <p class="area-kind">Hot topic · Energy · Updated 20 May 2026 [sample date]</p>
+          <h1>North Sea oil and gas</h1>
+          <!-- Frontier's view in brief (R41) -->
+          <div class="view-box">
+            <h2 class="h-small">Our view in brief</h2>
+            <ul>
+              <li>More UK production would do little to lower prices, which are set in international markets.</li>
+              <li>It could reduce import dependence somewhat, mainly for gas, but not quickly enough to help with near-term shocks.</li>
+              <li>The case for more production rests on growth, jobs, tax revenues, emissions and the UK's climate leadership, and on how those are traded off.</li>
+            </ul>
+          </div>
+          <div class="btn-row" style="margin-top:1rem"><span id="tp-follow"></span><a href="../pages/report.html">Read the latest report</a></div>
+        </div>
+        <div>
+          <div class="wf-placeholder ratio-4-3">Topic image 4:3</div>
+        </div>
+      </div>
+
+      <div class="stat-row" aria-label="Key figures">
+        <div><b>4.5m</b><span>barrels of oil equivalent a day at the 1999 peak</span></div>
+        <div><b>1.09m</b><span>a day in 2024</span></div>
+        <div><b>Almost half</b><span>of UK oil and gas needs still met from UK production</span></div>
+        <div><b>About ¾</b><span>of UK primary energy still comes from oil and gas</span></div>
+      </div>
+      <p class="wf-note" data-note="1"><span class="wf-note-label">Behaviour</span>The view in brief and the figures are written for the hub and reviewed whenever a new piece is added; everything below is pulled in automatically from content tagged to the topic.</p>
+
+      <div class="split">
+        <!-- Everything on the topic, in date order (R41) -->
+        <section aria-labelledby="tl-h">
+          <div class="section-head"><h2 id="tl-h">Everything we've published</h2></div>
+          <div class="chip-row" id="tp-types" role="group" aria-label="Filter by type"></div>
+          <ol class="timeline" id="tp-timeline"></ol>
+        </section>
+        <aside class="aside-stack" aria-label="People and events">
+          <section><h2>Our experts</h2><ul class="team-grid" id="tp-experts"></ul></section>
+          <section><h2>Coming up</h2><ul class="mini-events" id="tp-events"></ul></section>
+        </aside>
+      </div>
+
+      <div data-signup-slot="topic"></div>
+      <p class="wf-note query" data-note="2"><span class="wf-note-label">Question for Frontier</span>Is the North Sea a topic Frontier expects to keep publishing on? A hub with nothing new for a year starts to work against you, so it is worth picking topics with a pipeline.</p>
+    </div>
+  </main>
+
+  <!-- Prototype pager (replaces Frontier's own footer, R01) -->
+  <footer class="proto-footer">
+    <div class="container">
+      <nav class="proto-pager" aria-label="Previous and next prototype" data-proto-pager></nav>
+      <p class="wf-meta">Prepared by ClerksWell · Prototypes for discussion · Titles, people and figures from frontier-economics.com; older dates, credentials, upcoming events and anything in [brackets] are samples</p>
+    </div>
+  </footer>
+
+  <script src="../js/wireframe-core.js"></script>
+  <script src="../js/data.js"></script>
+  <script src="../js/wireframe.js"></script>
+</body>
+</html>

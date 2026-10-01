@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Energy — Frontier prototype</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/theme.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- Prototype navigator (replaces Frontier's own header, R01) -->
+  <header class="sticky site-header proto-nav">
+    <div class="container proto-nav-row">
+      <a class="proto-home" href="../index.html" aria-label="Frontier Economics prototypes, overview">Frontier <span>prototypes</span></a>
+      <nav aria-label="Prototypes">
+        <ul class="proto-links">
+          <li><a href="../index.html" data-proto="index">Overview</a></li>
+          <li><a href="../pages/contact.html" data-proto="contact expertise"><span class="n">1</span> Talk to us</a></li>
+          <li><a href="../pages/insights.html" data-proto="insights search article"><span class="n">2</span> Insights</a></li>
+          <li><a href="../pages/credentials.html" data-proto="credentials case-study"><span class="n">3</span> Track record</a></li>
+          <li><a href="../pages/topics.html" data-proto="topics topic report model"><span class="n">4</span> Big questions</a></li>
+          <li><a href="../pages/subscribe.html" data-proto="subscribe events"><span class="n">5</span> Stay in touch</a></li>
+        </ul>
+      </nav>
+      <a class="follow-chip" href="../pages/subscribe.html#following" aria-label="Topics you follow"><span>Following</span> <b data-follow-count>0</b></a>
+      <button type="button" class="notes-toggle" role="switch" aria-checked="false" data-notes-toggle>
+        <span class="notes-track" aria-hidden="true"><span class="notes-thumb"></span></span>
+        <span class="notes-label">Notes off</span>
+      </button>
+    </div>
+  </header>
+
+
+  <main id="main" class="flush">
+    <aside class="proposal" aria-label="About this prototype">
+      <div class="container">
+        <p class="proposal-eyebrow">Prototype 1 of 5 · Sector and expertise pages · ideas 3, 11</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>Every sector and expertise page names two or three people to talk to, with a route straight into the enquiry form and a link to everyone working in that area. Expertise pages also carry a short recognition strip: rankings, and the courts and tribunals where Frontier's experts have given evidence. The rest of the page stays as it is, including the capability list the Facelift is redesigning.</p></div>
+          <div><h2>Why</h2><p>The live Energy and Competition pages name nobody. Competition ends with four related articles and no prompt to get in touch. Frontier's Lexology 2026 listings exist only as a news item, and Jon Adlard's Future Leader listing only on his profile. A general counsel comparing firms is presumably trying to work out who they would be dealing with, and at the moment the page doesn't say.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="container" id="expertise">
+      <nav class="area-switch" aria-label="Example pages"><span class="muted">Example:</span> <a href="../pages/expertise.html?id=energy" data-area-switch="energy">Energy (sector)</a> <a href="../pages/expertise.html?id=competition" data-area-switch="competition">Competition (expertise)</a></nav>
+
+      <div class="area-head">
+        <div>
+          <ol class="crumbs"><li><a href="#">Home</a></li><li id="ex-crumb">Sectors</li><li id="ex-name-crumb">Energy</li></ol>
+          <p class="area-kind" id="ex-kind">Sector</p>
+          <h1 id="ex-name">Energy</h1>
+          <p class="standfirst" id="ex-standfirst"></p>
+        </div>
+        <div>
+          <p id="ex-intro"></p>
+          <div class="btn-row"><a class="btn" id="ex-enquire" href="../pages/contact.html?route=new">Talk to us about a project</a><span id="ex-follow"></span></div>
+        </div>
+      </div>
+
+      <!-- Talk to our team (R15) -->
+      <section class="team-band" aria-labelledby="ex-team-h">
+        <h2 id="ex-team-h">Talk to our team</h2>
+        <ul class="team-grid" id="ex-team"></ul>
+        <div class="btn-row"><a href="#" id="ex-team-all" data-profile>See everyone working in this area</a></div>
+        <p class="wf-note" data-note="1"><span class="wf-note-label">Behaviour</span>Contact opens the enquiry form with this area and the person already filled in. Names open their profile, and "See everyone" opens the people directory filtered to this area; both are being redesigned in the Facelift.</p>
+        <p class="wf-note query" data-note="2"><span class="wf-note-label">Question for Frontier</span>Who should be named on each page, and how often should the list be reviewed? We'd suggest no more than three, chosen by the practice rather than by seniority alone.</p>
+      </section>
+
+      <!-- Recognition strip (R16) -->
+      <section id="ex-recognition" aria-labelledby="ex-rec-h" hidden style="margin-top:3rem">
+        <div class="section-head"><h2 id="ex-rec-h">Recognition</h2></div>
+        <ul class="rec-strip" id="ex-rec-list"></ul>
+        <p class="wf-note" data-note="3"><span class="wf-note-label">Behaviour</span>Held in one list in the CMS and tagged by area, so a new ranking appears on every relevant page at once. Try the <a href="../pages/expertise.html?id=energy">Energy</a> page: with nothing tagged, the strip doesn't show.</p>
+      </section>
+
+      <section aria-labelledby="ex-caps-h" style="margin-top:3rem">
+        <div class="section-head"><h2 id="ex-caps-h">What we do</h2></div>
+        <ul class="cap-list" id="ex-caps"></ul>
+        <p class="wf-note" data-note="4"><span class="wf-note-label">Behaviour</span>Shown as a plain list here. On the live site this is the accordion the Facelift is redesigning, so it would use that component.</p>
+      </section>
+
+      <div class="split">
+        <section aria-labelledby="ex-related-h">
+          <div class="section-head"><h2 id="ex-related-h">Latest thinking</h2><a id="ex-related-all" href="../pages/insights.html">See all</a></div>
+          <div id="ex-related"></div>
+        </section>
+        <section aria-labelledby="ex-creds-h">
+          <div class="section-head"><h2 id="ex-creds-h">Recent work</h2><a id="ex-creds-all" href="../pages/credentials.html">See all</a></div>
+          <ul class="cred-mini" id="ex-creds"></ul>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- Prototype pager (replaces Frontier's own footer, R01) -->
+  <footer class="proto-footer">
+    <div class="container">
+      <nav class="proto-pager" aria-label="Previous and next prototype" data-proto-pager></nav>
+      <p class="wf-meta">Prepared by ClerksWell · Prototypes for discussion · Titles, people and figures from frontier-economics.com; older dates, credentials, upcoming events and anything in [brackets] are samples</p>
+    </div>
+  </footer>
+
+  <script src="../js/wireframe-core.js"></script>
+  <script src="../js/data.js"></script>
+  <script src="../js/wireframe.js"></script>
+</body>
+</html>

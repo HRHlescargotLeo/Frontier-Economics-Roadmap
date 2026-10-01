@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search — Frontier prototype</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/theme.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- Prototype navigator (replaces Frontier's own header, R01) -->
+  <header class="sticky site-header proto-nav">
+    <div class="container proto-nav-row">
+      <a class="proto-home" href="../index.html" aria-label="Frontier Economics prototypes, overview">Frontier <span>prototypes</span></a>
+      <nav aria-label="Prototypes">
+        <ul class="proto-links">
+          <li><a href="../index.html" data-proto="index">Overview</a></li>
+          <li><a href="../pages/contact.html" data-proto="contact expertise"><span class="n">1</span> Talk to us</a></li>
+          <li><a href="../pages/insights.html" data-proto="insights search article"><span class="n">2</span> Insights</a></li>
+          <li><a href="../pages/credentials.html" data-proto="credentials case-study"><span class="n">3</span> Track record</a></li>
+          <li><a href="../pages/topics.html" data-proto="topics topic report model"><span class="n">4</span> Big questions</a></li>
+          <li><a href="../pages/subscribe.html" data-proto="subscribe events"><span class="n">5</span> Stay in touch</a></li>
+        </ul>
+      </nav>
+      <a class="follow-chip" href="../pages/subscribe.html#following" aria-label="Topics you follow"><span>Following</span> <b data-follow-count>0</b></a>
+      <button type="button" class="notes-toggle" role="switch" aria-checked="false" data-notes-toggle>
+        <span class="notes-track" aria-hidden="true"><span class="notes-thumb"></span></span>
+        <span class="notes-label">Notes off</span>
+      </button>
+    </div>
+  </header>
+
+
+  <main id="main" class="flush">
+    <aside class="proposal" aria-label="About this prototype">
+      <div class="container">
+        <p class="proposal-eyebrow">Prototype 2 of 5 · Site search · idea 17</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>Search results that lead with the pages people are most likely to want (the Energy sector page, the HyLO model, a topic hub), then group everything else by type with a count on each tab. Every result shows its date and type, results can be sorted by relevance or date, and people appear as their own tab.</p></div>
+          <div><h2>Why</h2><p>A search for "hydrogen" on the live site returns 147 results, eight to a page across 19 pages, with no dates, no indication of type and no way to sort or filter. Page one includes a piece framed around the 2020 EU Hydrogen Strategy and work for BEIS, a department replaced in 2023; the September 2026 article on blue and turquoise hydrogen isn't on it. Someone checking what Frontier thinks now would reasonably conclude it stopped thinking about hydrogen some years ago.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="container" id="search">
+      <div class="page-intro">
+        <ol class="crumbs"><li><a href="#">Home</a></li><li>Search</li></ol>
+        <h1>Search</h1>
+        <form class="lib-search" id="s-form" role="search">
+          <label class="visually-hidden" for="s-q">Search the site</label>
+          <input type="search" id="s-q">
+          <button type="submit" class="btn">Search</button>
+        </form>
+        <div class="try-row"><span class="muted">Try:</span> <button type="button" class="chip" data-try="hydrogen">hydrogen</button><button type="button" class="chip" data-try="north sea">north sea</button><button type="button" class="chip" data-try="competition">competition</button><button type="button" class="chip" data-try="Dan Roberts">Dan Roberts</button><button type="button" class="chip" data-try="xylophone">no results</button></div>
+        <p class="result-count" id="s-summary" aria-live="polite"></p>
+      </div>
+
+      <!-- Suggested pages (R25) -->
+      <div id="s-bets"></div>
+      <p class="wf-note" data-note="1"><span class="wf-note-label">Behaviour</span>Suggested pages are matched on a short list of terms set by editors for each key page, so "hydrogen" always surfaces the Energy page and the HyLO model above individual articles.</p>
+
+      <div class="results-bar">
+        <div class="tabs" id="s-tabs" role="tablist" aria-label="Result types"></div>
+        <div class="field" id="s-sortwrap"><label for="s-sort">Sort</label><select id="s-sort"><option value="relevance">Most relevant</option><option value="newest">Newest first</option></select></div>
+      </div>
+      <div id="s-results"></div>
+      <p class="wf-note query" data-note="2"><span class="wf-note-label">Question for Frontier</span>What search does the CMS offer today, and can it be weighted by date? Some of this (suggested pages, type tabs) is configuration; ranking newer work higher may need a search service.</p>
+    </div>
+  </main>
+
+  <!-- Prototype pager (replaces Frontier's own footer, R01) -->
+  <footer class="proto-footer">
+    <div class="container">
+      <nav class="proto-pager" aria-label="Previous and next prototype" data-proto-pager></nav>
+      <p class="wf-meta">Prepared by ClerksWell · Prototypes for discussion · Titles, people and figures from frontier-economics.com; older dates, credentials, upcoming events and anything in [brackets] are samples</p>
+    </div>
+  </footer>
+
+  <script src="../js/wireframe-core.js"></script>
+  <script src="../js/data.js"></script>
+  <script src="../js/wireframe.js"></script>
+</body>
+</html>

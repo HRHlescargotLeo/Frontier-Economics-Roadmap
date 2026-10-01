@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>North Sea report — Frontier prototype</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body>
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <aside class="proposal" aria-label="About this prototype">
+      <div class="container">
+        <p class="proposal-eyebrow">Prototype 4 of 5 · Report landing page · ideas 14, 24</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>A landing page for each major report, so the PDF is the last step rather than the only one. Headline numbers, key findings, one chart that tells the story, the downloads, who wrote it and how it was funded, then the related coverage and the rest of the series.</p></div>
+          <div><h2>Why</h2><p>The two North Sea reports exist on the live site as PDF links inside an article and a news item. Someone who wants the gist has to download and open a PDF; someone who wants to share it has to share a file. A page gives the report a proper address, something for search engines to index and a place to put the people who wrote it.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="container" id="report">
+      <div class="page-intro">
+        <ol class="crumbs"><li><a href="#">Home</a></li><li><a href="~/pages/topic.html?id=north-sea">North Sea oil and gas</a></li><li>Report</li></ol>
+        <p class="area-kind">Report · Part two of two · Energy · Public Policy</p>
+        <h1>What are the broader impacts of a more supportive North Sea oil and gas environment?</h1>
+        <p class="article-meta"><span>Published May 2026 [sample date]</span> <span class="sep">·</span> <span>Independent Frontier analysis</span> <span class="sep">·</span> <span>PDF, [n] pages</span></p>
+      </div>
+
+      <div class="article-layout">
+        <div class="article-body">
+          <p class="lead">Britain's energy system remains exposed to global fossil fuel markets. This second briefing looks at what a more supportive regime for North Sea production, through licensing, regulation or tax, would mean for growth, tax revenues and emissions. Part one looked at prices and resilience.</p>
+
+          <!-- Key findings (R42) -->
+          <div class="key-findings">
+            <h2>Key findings</h2>
+            <ul>
+              <li><b>Prices:</b> more UK production would have limited impact; oil and gas prices are set internationally.</li>
+              <li><b>Resilience:</b> some reduction in import dependence, mainly for gas. For oil the case is weaker, as most UK crude is exported.</li>
+              <li><b>Growth and jobs:</b> no automatic boost, but it could support supply chains and help move skills to low-carbon industries.</li>
+              <li><b>Tax:</b> receipts could rise, depending on the fiscal regime and its effect on investment.</li>
+              <li><b>Emissions:</b> depend on what is displaced. UK gas has lower embedded emissions than LNG.</li>
+              <li><b>Climate leadership:</b> a clear trade-off with the UK's international position.</li>
+            </ul>
+          </div>
+
+          <!-- One chart (R42) -->
+          <figure class="chart-box">
+            <figcaption><b>UK offshore oil and gas production</b><br><span class="small muted">Million barrels of oil equivalent a day</span></figcaption>
+            <svg viewBox="0 0 420 250" role="img" aria-label="Production fell from about 4.5 million barrels of oil equivalent a day in 1999 to about 1.09 million in 2024">
+              <line class="chart-axis" x1="40" y1="210" x2="400" y2="210"></line>
+              <rect class="chart-bar" x="90" y="48" width="90" height="162"></rect>
+              <rect class="chart-bar now" x="260" y="170.8" width="90" height="39.2"></rect>
+              <text x="135" y="38" text-anchor="middle" font-size="16" font-weight="700">4.5</text>
+              <text x="305" y="160" text-anchor="middle" font-size="16" font-weight="700">1.09</text>
+              <text x="135" y="232" text-anchor="middle" font-size="13">1999 (peak)</text>
+              <text x="305" y="232" text-anchor="middle" font-size="13">2024</text>
+            </svg>
+            <p class="small muted" style="margin:0.5rem 0 0">Source: Frontier Economics, North Sea oil and gas article, April 2026. The live page would chart the full annual series.</p>
+          </figure>
+          <p class="wf-note" data-note="1"><span class="wf-note-label">Behaviour</span>Charts are built as accessible web charts with a "Download data" link, so they can be read without the PDF and reused on LinkedIn. Only two points are drawn here because those are the two the article gives.</p>
+
+          <h2>Download</h2>
+          <ul class="downloads">
+            <li><a href="#"><span class="file-ico">PDF</span><span><b>Part two: growth, tax and emissions</b><br><span class="small muted">May 2026 [sample date] · PDF [size]</span></span></a></li>
+            <li><a href="#"><span class="file-ico">PDF</span><span><b>Part one: prices and resilience</b><br><span class="small muted">April 2026 · PDF [size]</span></span></a></li>
+          </ul>
+
+          <h2>Coverage</h2>
+          <ul class="plain small"><li>[Publication, date, headline]</li><li>[Publication, date, headline]</li></ul>
+          <p class="wf-note query" data-note="2"><span class="wf-note-label">Question for Frontier</span>Should the PDF sit behind a short form (name, organisation) to capture who downloads it? We'd advise against for policy work meant to be read widely, but it's a common choice for commercial reports.</p>
+        </div>
+
+        <aside class="aside-stack" aria-label="About this report">
+          <div class="glance">
+            <h2>About this report</h2>
+            <dl>
+              <div><dt>Series</dt><dd>North Sea oil and gas, part two of two</dd></div>
+              <div><dt>Funding</dt><dd>Independent Frontier analysis</dd></div>
+              <div><dt>Authors</dt><dd>Dan Roberts, Claire Thornhill, Sam Street, María Paula Torres [to confirm]</dd></div>
+            </dl>
+          </div>
+          <div class="btn-row"><a class="btn" href="#">Download PDF</a><button type="button" class="btn btn-secondary" data-copy-link>Copy link</button></div>
+          <p class="small"><a href="~/pages/topic.html?id=north-sea">Everything on North Sea oil and gas</a></p>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/wireframe-core.js"></script>
+  <script src="~/js/data.js"></script>
+  <script src="~/js/wireframe.js"></script>
+</body>
+</html>

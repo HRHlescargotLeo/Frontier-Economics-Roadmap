@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search — Frontier prototype</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body>
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <aside class="proposal" aria-label="About this prototype">
+      <div class="container">
+        <p class="proposal-eyebrow">Prototype 2 of 5 · Site search · idea 17</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>Search results that lead with the pages people are most likely to want (the Energy sector page, the HyLO model, a topic hub), then group everything else by type with a count on each tab. Every result shows its date and type, results can be sorted by relevance or date, and people appear as their own tab.</p></div>
+          <div><h2>Why</h2><p>A search for "hydrogen" on the live site returns 147 results, eight to a page across 19 pages, with no dates, no indication of type and no way to sort or filter. Page one includes a piece framed around the 2020 EU Hydrogen Strategy and work for BEIS, a department replaced in 2023; the September 2026 article on blue and turquoise hydrogen isn't on it. Someone checking what Frontier thinks now would reasonably conclude it stopped thinking about hydrogen some years ago.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="container" id="search">
+      <div class="page-intro">
+        <ol class="crumbs"><li><a href="#">Home</a></li><li>Search</li></ol>
+        <h1>Search</h1>
+        <form class="lib-search" id="s-form" role="search">
+          <label class="visually-hidden" for="s-q">Search the site</label>
+          <input type="search" id="s-q">
+          <button type="submit" class="btn">Search</button>
+        </form>
+        <div class="try-row"><span class="muted">Try:</span> <button type="button" class="chip" data-try="hydrogen">hydrogen</button><button type="button" class="chip" data-try="north sea">north sea</button><button type="button" class="chip" data-try="competition">competition</button><button type="button" class="chip" data-try="Dan Roberts">Dan Roberts</button><button type="button" class="chip" data-try="xylophone">no results</button></div>
+        <p class="result-count" id="s-summary" aria-live="polite"></p>
+      </div>
+
+      <!-- Suggested pages (R25) -->
+      <div id="s-bets"></div>
+      <p class="wf-note" data-note="1"><span class="wf-note-label">Behaviour</span>Suggested pages are matched on a short list of terms set by editors for each key page, so "hydrogen" always surfaces the Energy page and the HyLO model above individual articles.</p>
+
+      <div class="results-bar">
+        <div class="tabs" id="s-tabs" role="tablist" aria-label="Result types"></div>
+        <div class="field" id="s-sortwrap"><label for="s-sort">Sort</label><select id="s-sort"><option value="relevance">Most relevant</option><option value="newest">Newest first</option></select></div>
+      </div>
+      <div id="s-results"></div>
+      <p class="wf-note query" data-note="2"><span class="wf-note-label">Question for Frontier</span>What search does the CMS offer today, and can it be weighted by date? Some of this (suggested pages, type tabs) is configuration; ranking newer work higher may need a search service.</p>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/wireframe-core.js"></script>
+  <script src="~/js/data.js"></script>
+  <script src="~/js/wireframe.js"></script>
+</body>
+</html>

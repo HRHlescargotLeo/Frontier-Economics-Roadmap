@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hot topics — Frontier prototype</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body>
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <aside class="proposal" aria-label="About this prototype">
+      <div class="container">
+        <p class="proposal-eyebrow">Prototype 4 of 5 · Hot topics · idea 23</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>Hot Topics in the main menu, as a list of dated topic hubs that can be filtered by area. Each card says how many pieces sit behind it and when it was last updated, so a reader can tell a live debate from an archive. North Sea oil and gas becomes the first new hub.</p></div>
+          <div><h2>Why</h2><p>Frontier already has a Hot Topics section with seven collections, including the Cunliffe review, COMET and the Big Questions podcast. It isn't in the main menu or the footer, the collections carry no dates, and the most current issue, North Sea production, doesn't have one. The Cunliffe page still describes the review as published "earlier this summer"; that was July 2025.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="container" id="topics">
+      <div class="page-intro">
+        <ol class="crumbs"><li><a href="#">Home</a></li><li>Hot topics</li></ol>
+        <h1>Hot topics</h1>
+        <p class="lead">Our perspectives on the biggest issues, gathered in one place and kept up to date.</p>
+      </div>
+      <p class="wf-note" data-note="1"><span class="wf-note-label">Behaviour</span>Sits in the main menu under News &amp; insights, and as a link from the menu's Sectors and Expertise columns where a topic belongs to one. Cards show the date of the latest piece added, not the date the hub was created.</p>
+      <div class="chip-row" id="tp-chips" role="group" aria-label="Filter by area"></div>
+      <ul class="topic-list" id="tp-list"></ul>
+      <p class="wf-note query" data-note="2"><span class="wf-note-label">Question for Frontier</span>Who decides when a topic becomes a hub, and when an old one is retired to the archive? Five or six live hubs is probably the most a small team can keep current.</p>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/wireframe-core.js"></script>
+  <script src="~/js/data.js"></script>
+  <script src="~/js/wireframe.js"></script>
+</body>
+</html>

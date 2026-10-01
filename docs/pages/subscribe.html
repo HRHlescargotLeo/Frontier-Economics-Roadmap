@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontier Focus — Frontier prototype</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/theme.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- Prototype navigator (replaces Frontier's own header, R01) -->
+  <header class="sticky site-header proto-nav">
+    <div class="container proto-nav-row">
+      <a class="proto-home" href="../index.html" aria-label="Frontier Economics prototypes, overview">Frontier <span>prototypes</span></a>
+      <nav aria-label="Prototypes">
+        <ul class="proto-links">
+          <li><a href="../index.html" data-proto="index">Overview</a></li>
+          <li><a href="../pages/contact.html" data-proto="contact expertise"><span class="n">1</span> Talk to us</a></li>
+          <li><a href="../pages/insights.html" data-proto="insights search article"><span class="n">2</span> Insights</a></li>
+          <li><a href="../pages/credentials.html" data-proto="credentials case-study"><span class="n">3</span> Track record</a></li>
+          <li><a href="../pages/topics.html" data-proto="topics topic report model"><span class="n">4</span> Big questions</a></li>
+          <li><a href="../pages/subscribe.html" data-proto="subscribe events"><span class="n">5</span> Stay in touch</a></li>
+        </ul>
+      </nav>
+      <a class="follow-chip" href="../pages/subscribe.html#following" aria-label="Topics you follow"><span>Following</span> <b data-follow-count>0</b></a>
+      <button type="button" class="notes-toggle" role="switch" aria-checked="false" data-notes-toggle>
+        <span class="notes-track" aria-hidden="true"><span class="notes-thumb"></span></span>
+        <span class="notes-label">Notes off</span>
+      </button>
+    </div>
+  </header>
+
+
+  <main id="main" class="flush">
+    <aside class="proposal" aria-label="About this prototype">
+      <div class="container">
+        <p class="proposal-eyebrow">Prototype 5 of 5 · Frontier Focus sign-up · ideas 29, 30, 31</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>A way to subscribe to Frontier Focus, choosing the sectors and expertise areas you care about and how often you want to hear. Anything you follow elsewhere on the site (a topic hub, a sector, an expert) shows up here too. The archive of past editions sits underneath, with dates. A compact version of the sign-up appears at the end of articles and topic hubs.</p></div>
+          <div><h2>Why</h2><p>Frontier Focus is described as "our newsletter" and has eight pages of past editions, but there is no way to sign up for it: not on that page, not on the articles we checked and not in the footer. The editions aren't dated either. Every reader who finishes an article and wants more currently has to remember to come back.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="container" id="subscribe">
+      <div class="page-intro">
+        <ol class="crumbs"><li><a href="#">Home</a></li><li><a href="#">News &amp; insights</a></li><li>Frontier Focus</li></ol>
+        <h1>Frontier Focus</h1>
+        <p class="lead">Our newsletter, plus new analysis on the topics you choose. About once a month [to confirm], and you can change your topics or unsubscribe at any time.</p>
+      </div>
+
+      <div class="sub-layout">
+        <div>
+          <!-- Sign-up (R50) -->
+          <form id="sub-form" novalidate>
+            <div class="error-summary" role="alert" hidden><b>Some details are missing.</b> Check the fields marked below.</div>
+            <div class="form-grid">
+              <div class="field"><label for="sub-email">Email address</label><input type="email" id="sub-email" autocomplete="email" required><p class="field-error" hidden>Enter an email address like name@organisation.com</p></div>
+              <div class="field"><label for="sub-name">Name</label><input type="text" id="sub-name" autocomplete="name" required><p class="field-error" hidden>Enter your name</p></div>
+              <div class="field full"><label for="sub-org">Organisation <span class="muted">(optional)</span></label><input type="text" id="sub-org" autocomplete="organization"></div>
+            </div>
+            <fieldset class="field" id="sub-topics-field">
+              <div class="fieldset-head"><legend>What would you like to hear about?</legend><button type="button" class="btn-link small" id="sub-all">Select all</button></div>
+              <p class="field-error" hidden>Choose at least one topic</p>
+              <h3 class="h-small">Sectors</h3>
+              <div class="topic-boxes" id="sub-sectors"></div>
+              <h3 class="h-small">Expertise</h3>
+              <div class="topic-boxes" id="sub-expertise"></div>
+            </fieldset>
+            <fieldset>
+              <legend>How often?</legend>
+              <label class="check" for="sub-f1"><input type="radio" name="sub-freq" id="sub-f1" value="monthly" checked> A monthly round-up with Frontier Focus</label>
+              <label class="check" for="sub-f2"><input type="radio" name="sub-freq" id="sub-f2" value="each"> As soon as something is published on my topics</label>
+            </fieldset>
+            <div class="field"><label class="check" for="sub-events"><input type="checkbox" id="sub-events"> Also send me invitations to events near me</label></div>
+            <div class="field"><label class="check" for="sub-consent"><input type="checkbox" id="sub-consent" required> I agree to Frontier Economics emailing me as described in the <a href="#">privacy notice</a></label><p class="field-error" hidden>Tick to agree before subscribing</p></div>
+            <button type="submit" class="btn">Subscribe</button>
+            <p class="wf-note" data-note="1"><span class="wf-note-label">Behaviour</span>Arriving from the sign-up box on an article or hub carries the email address over, and anything you already follow is ticked. Subscribing sends a confirmation email (double opt-in) before anything else is sent.</p>
+            <p class="wf-note query" data-note="2"><span class="wf-note-label">Question for Frontier</span>Which email platform sends Frontier Focus today, and can it segment by topic? The topic list here is the site taxonomy; the platform needs the same list.</p>
+          </form>
+
+          <div id="sub-check" class="confirm-box" tabindex="-1" hidden>
+            <div class="tick" aria-hidden="true">✉</div>
+            <h2>Check your inbox</h2>
+            <p>We've sent a confirmation link to <b id="sub-check-email"></b>. Your subscription starts once you click it.</p>
+            <p class="small muted">Topics: <span id="sub-topics-chosen"></span></p>
+            <p><button type="button" class="btn btn-secondary" id="sub-confirm">Simulate clicking the link in the email</button></p>
+          </div>
+          <div id="sub-done" class="confirm-box" tabindex="-1" hidden>
+            <div class="tick" aria-hidden="true">✓</div>
+            <h2>You're subscribed</h2>
+            <p>The next Frontier Focus will arrive in [month]. Every email has a link to change your topics or unsubscribe.</p>
+            <p><button type="button" class="btn btn-secondary" id="sub-edit">Change my topics</button></p>
+          </div>
+        </div>
+
+        <aside class="aside-stack" aria-label="Following and archive">
+          <!-- Following (R51) -->
+          <section id="following">
+            <h2>You're following</h2>
+            <ul class="following-list" id="following-list"></ul>
+            <p class="wf-note" data-note="3"><span class="wf-note-label">Behaviour</span>Follow buttons on topic hubs, sector pages and articles add to this list without a separate sign-up form, once someone has confirmed their email.</p>
+          </section>
+        </aside>
+      </div>
+
+      <!-- Archive (R52) -->
+      <section id="archive" aria-labelledby="arch-h" style="margin-top:3rem">
+        <div class="section-head"><h2 id="arch-h">Past editions</h2><span class="muted small">Dates are samples</span></div>
+        <ul class="archive-list" id="archive-list"></ul>
+      </section>
+    </div>
+  </main>
+
+  <!-- Prototype pager (replaces Frontier's own footer, R01) -->
+  <footer class="proto-footer">
+    <div class="container">
+      <nav class="proto-pager" aria-label="Previous and next prototype" data-proto-pager></nav>
+      <p class="wf-meta">Prepared by ClerksWell · Prototypes for discussion · Titles, people and figures from frontier-economics.com; older dates, credentials, upcoming events and anything in [brackets] are samples</p>
+    </div>
+  </footer>
+
+  <script src="../js/wireframe-core.js"></script>
+  <script src="../js/data.js"></script>
+  <script src="../js/wireframe.js"></script>
+</body>
+</html>

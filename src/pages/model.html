@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COMET — Frontier prototype</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body>
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <aside class="proposal" aria-label="About this prototype">
+      <div class="container">
+        <p class="proposal-eyebrow">Prototype 4 of 5 · Models and tools · idea 25</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>A Models and tools section with a page for each of Frontier's models, built on the COMET page that already exists: the question the model answers, what it covers, how clients use it, the engagements it has been used on and who to talk to. The other models get the same page, once the modelling teams have written them up.</p></div>
+          <div><h2>Why</h2><p>COMET has a good page in Hot Topics, with features, applications, a brochure and a named contact. SPIRIT, HyLO, the gas flow model and the customer behaviour model appear only as items inside the Energy page. Proprietary models are one of the more tangible things an economic consultancy can point to, and at the moment most of Frontier's are hidden in a list.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="container" id="model">
+      <div class="page-intro">
+        <ol class="crumbs"><li><a href="#">Home</a></li><li><a href="~/pages/expertise.html?id=energy">Energy</a></li><li>Models and tools</li></ol>
+      </div>
+      <div class="model-layout">
+        <nav aria-label="Models and tools">
+          <h2 class="h-small">Models and tools</h2>
+          <ul class="side-nav" id="md-nav"></ul>
+        </nav>
+        <div>
+          <p class="area-kind">Model · Energy</p>
+          <h1 id="md-name">COMET</h1>
+          <p class="standfirst" id="md-full"></p>
+          <p class="context-box small" id="md-placeholder-note" hidden>Only COMET has content on the live site. This page shows the template the other models would fill.</p>
+
+          <section aria-labelledby="md-q-h" style="margin-top:1.5rem">
+            <h2 class="h-small" id="md-q-h">The question it answers</h2>
+            <p class="lead" id="md-q"></p>
+          </section>
+
+          <section aria-labelledby="md-f-h">
+            <div class="section-head"><h2 id="md-f-h">What it covers</h2></div>
+            <ul class="feature-list" id="md-features"></ul>
+          </section>
+
+          <section aria-labelledby="md-u-h">
+            <div class="section-head"><h2 id="md-u-h">How clients use it</h2></div>
+            <ul class="uses" id="md-uses"></ul>
+          </section>
+
+          <div class="split">
+            <section aria-labelledby="md-used-h">
+              <div class="section-head"><h2 id="md-used-h">Where we've used it</h2></div>
+              <ul class="cred-list" id="md-used"></ul>
+              <p class="wf-note" data-note="1"><span class="wf-note-label">Behaviour</span>Pulled from the credentials library (prototype 3): any engagement tagged with this model appears here.</p>
+            </section>
+            <aside class="aside-stack" aria-label="Contact and brochure">
+              <section><h2>Talk to us about it</h2><ul class="team-grid" id="md-contact"></ul></section>
+              <section id="md-brochure"><h2>Brochure</h2><ul class="downloads"><li><a href="#"><span class="file-ico">PDF</span><span><b id="md-brochure-name"></b></span></a></li></ul></section>
+            </aside>
+          </div>
+          <p class="wf-note query" data-note="2"><span class="wf-note-label">Question for Frontier</span>Which models are ready to be shown publicly, and are there any outside Energy (for example in competition or data science) that should be in the section?</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/wireframe-core.js"></script>
+  <script src="~/js/data.js"></script>
+  <script src="~/js/wireframe.js"></script>
+</body>
+</html>

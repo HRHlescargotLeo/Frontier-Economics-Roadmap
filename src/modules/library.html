@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module library — Frontier prototype</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body>
+  <!-- @@include header.html -->
+
+  <main id="main">
+    <div class="container" id="library">
+      <div class="page-intro">
+        <ol class="crumbs"><li><a href="~/index.html">Overview</a></li><li>Module library</li></ol>
+        <h1>Module library</h1>
+        <p class="lead">The new components used across the five prototypes, each shown once. Components the Facelift is redesigning (banner, featured items, accordion, image and text, people profile, people directory) are not here.</p>
+      </div>
+
+      <!-- Result card (R20, R25) -->
+      <section class="lib-item"><h2>Result card</h2><p class="muted">Used in the insights library, search, related content and sector pages. Type, date, title, summary, tags, authors and, where public, who commissioned it.</p><div class="lib-demo" id="lib-result"></div></section>
+
+      <!-- Person card (R15) -->
+      <section class="lib-item"><h2>Person card with contact</h2><p class="muted">Used for "Talk to our team", authors and topic experts. Contact opens the enquiry form pre-filled; the name opens the Facelift profile.</p><div class="lib-demo"><ul class="team-grid" id="lib-person"></ul></div></section>
+
+      <!-- Follow button (R51) -->
+      <section class="lib-item"><h2>Follow button</h2><p class="muted">On topic hubs, sector and expertise pages and articles. The count in the prototype bar shows how many things you follow.</p><div class="lib-demo" id="lib-follow"></div></section>
+
+      <!-- Sign-up module (R54) -->
+      <section class="lib-item"><h2>Sign-up box</h2><p class="muted">At the end of articles and topic hubs. Carries the email address to the full sign-up page.</p><div class="lib-demo" data-signup-slot="library"></div></section>
+
+      <!-- Recognition strip (R16) -->
+      <section class="lib-item"><h2>Recognition strip</h2><p class="muted">On expertise pages, from one tagged list.</p><div class="lib-demo"><ul class="rec-strip"><li><span class="rec-year">2026</span><b>Lexology Index: Competition 2026</b><span>Multiple Frontier experts listed</span></li><li><span class="rec-year">2023</span><b>Who's Who Legal, Economists</b><span>Jon Adlard listed as a Future Leader</span></li></ul></div></section>
+
+      <!-- Outcome figure (R33) -->
+      <section class="lib-item"><h2>Outcome figure</h2><p class="muted">The headline result on case studies and reports.</p><div class="lib-demo"><div class="outcome-figure"><b>£11bn</b><p style="margin:0">of planned network investment by the merged operator.</p></div></div></section>
+
+      <!-- Key findings (R26, R42) -->
+      <section class="lib-item"><h2>Key findings box</h2><p class="muted">Three to five points near the top of long articles and every report page.</p><div class="lib-demo"><div class="key-findings"><h2>Key findings</h2><ul><li>[Finding one]</li><li>[Finding two]</li><li>[Finding three]</li></ul></div></div></section>
+
+      <!-- Timeline (R41) -->
+      <section class="lib-item"><h2>Topic timeline</h2><p class="muted">Everything tagged to a topic, newest first, filterable by type.</p><div class="lib-demo"><ol class="timeline"><li><time datetime="2026-05-20">20 May 2026</time><div><span class="badge">Report</span><h3><a href="~/pages/report.html">What are the broader impacts of a more supportive North Sea oil and gas environment?</a></h3></div></li><li><time datetime="2026-04-28">28 April 2026</time><div><span class="badge">Article</span><h3><a href="~/pages/article.html?id=north-sea-article">North Sea oil and gas: tough trade-offs facing UK policymakers</a></h3></div></li></ol></div></section>
+
+      <!-- Downloads (R42) -->
+      <section class="lib-item"><h2>Download link</h2><p class="muted">Reports and brochures, with date and file size.</p><div class="lib-demo"><ul class="downloads"><li><a href="#"><span class="file-ico">PDF</span><span><b>Introducing COMET</b><br><span class="small muted">August 2025 · PDF [size]</span></span></a></li></ul></div></section>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/wireframe-core.js"></script>
+  <script src="~/js/data.js"></script>
+  <script src="~/js/wireframe.js"></script>
+</body>
+</html>
