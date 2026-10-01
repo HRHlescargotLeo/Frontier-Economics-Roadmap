@@ -2,7 +2,7 @@
 
 Clickable prototypes of five improvements to frontier-economics.com, prepared by ClerksWell.
 
-- **Phase:** 2, greyscale prototypes (version 1, 1 October 2026)
+- **Phase:** 3, designed prototypes (version 2, 1 October 2026). Version 1 was greyscale.
 - **Live:** https://hrhlescargotleo.github.io/Frontier-Economics-Roadmap/
 - **Scope boundary:** nothing here redesigns the FE Facelift components (homepage banner, featured items, accordion, image and text, people profile, people directory). The prototypes link to them instead.
 
@@ -30,7 +30,11 @@ Settings → Pages → Build and deployment → Source: **Deploy from a branch**
 
 ## Design layer
 
-All structure lives in `css/base.css` and `css/components.css`. `css/theme.css` is deliberately empty: phase 3 applies Frontier's look (from the phase 1 design system and `frontier-tokens.css`) in that file only, so deleting it returns the greyscale version.
+All structure lives in `css/base.css` and `css/components.css`. Frontier's look is applied entirely in `css/theme.css`, using the phase 1 design system tokens: delete that file (and `js/photos.js`) and the pack returns to the greyscale version 1. Oswald and Roboto Condensed stand in for Frontier's licensed display and label faces (Steelfish / Knockout); Roboto is the real body face.
+
+## Photography
+
+`js/photos.js` hotlinks Frontier's own images from frontier-economics.com/media and applies each one only after it loads; anywhere they can't be reached (including the Claude artifact preview) the illustrated brand-colour placeholders stay. Photography © Frontier Economics. Note that this repository and its Pages site are public.
 
 ## Data
 
